@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>EcoPulse - Langkah Kecil Anda, Perubahan Besar untuk Bumi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Public+Sans:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#95d4b3",
+                        "tertiary": "#274f3d",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#274e3d",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#f1c048",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-tint": "#2c694e",
+                        "on-surface-variant": "#404943",
+                        "on-background": "#191c1d",
+                        "outline": "#707973",
+                        "secondary": "#785a00",
+                        "inverse-surface": "#2e3132",
+                        "inverse-primary": "#95d4b3",
+                        "surface-container": "#edeeef",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed": "#002114",
+                        "on-primary-container": "#a8e7c5",
+                        "on-tertiary-container": "#b8e3cb",
+                        "tertiary-container": "#3f6754",
+                        "surface-bright": "#f8f9fa",
+                        "surface": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#0f5238",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-primary-fixed-variant": "#0e5138",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "primary-fixed": "#b1f0ce",
+                        "tertiary-fixed-dim": "#a5d0b9",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2d6a4f",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary-fixed": "#ffdf9c",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#c1ecd4",
+                        "on-secondary-container": "#725500",
+                        "secondary-container": "#fdcb52",
+                        "surface-variant": "#e1e3e4",
+                        "background": "#f8f9fa",
+                        "outline-variant": "#bfc9c1",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#002114"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin": "32px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "h3": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-sm": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sunlight-shadow {
+            box-shadow: 0 10px 40px -15px rgba(45, 106, 79, 0.08);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #0f5238, #785a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-emerald-50/50 sunlight-shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
+            <span class="text-2xl font-extrabold text-emerald-900 font-h2 tracking-tight">EcoPulse</span>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-emerald-700 font-semibold border-b-2 border-emerald-600 pb-1 font-body-md" href="#">Beranda</a>
+            <a class="text-slate-600 hover:text-emerald-600 transition-colors font-body-md" href="#">Isu Terkini</a>
+            <a class="text-slate-600 hover:text-emerald-600 transition-colors font-body-md" href="#">Panduan Hemat</a>
+            <a class="text-slate-600 hover:text-emerald-600 transition-colors font-body-md" href="#">Tanya Jawab</a>
+        </nav>
+        
+        <div class="flex items-center gap-4">
+            <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-sm hover:opacity-90 active:scale-95 transition-all sunlight-shadow hidden md:block">
+                Coba Tools Sekarang
+            </button>
+            <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-emerald-50/50 absolute w-full">
+        <nav class="flex flex-col px-6 py-4 gap-4">
+            <a class="text-emerald-700 font-semibold font-body-md" href="#">Beranda</a>
+            <a class="text-slate-600 hover:text-emerald-600 transition-colors font-body-md" href="#">Isu Terkini</a>
+            <a class="text-slate-600 hover:text-emerald-600 transition-colors font-body-md" href="#">Panduan Hemat</a>
+            <a class="text-slate-600 hover:text-emerald-600 transition-colors font-body-md" href="#">Tanya Jawab</a>
+            <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-sm w-full mt-2">
+                Coba Tools Sekarang
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main class="pt-24">
+    <section class="relative overflow-hidden px-6 py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-fixed text-primary font-label-sm mb-6">#MasaDepanHijau</span>
+                <h1 class="font-h1 text-h1 text-primary mb-6 leading-tight">Langkah Kecil Anda,<br/><span class="text-secondary">Perubahan Besar</span> untuk Bumi.</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Dapatkan update krisis energi terkini, pelajari cara mudah menghemat listrik dari nol, dan temukan solusi beralih ke energi terbarukan bersama asisten pintar kami.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-h3 text-lg flex items-center justify-center gap-2 sunlight-shadow active:scale-95 transition-transform">
+                        Mulai Hemat Energi
+                        <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+                    </button>
+                    <button class="bg-surface-container-lowest border border-primary text-primary px-8 py-4 rounded-xl font-h3 text-lg flex items-center justify-center gap-2 hover:bg-primary-fixed/20 active:scale-95 transition-transform">
+                        Tanya Solusi Energi
+                        <span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-fixed/30 rounded-full blur-3xl -z-10"></div>
+                <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl -z-10"></div>
+                <img alt="Eco Home Illustration" class="w-full h-auto rounded-3xl sunlight-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEWLlVdJ4Z0gw1mwXPDpmfTdPVvOhz72KnJGto7K_D0Hr6G432bWnmSg_Qq9-eYV1BFYoqMiy5On859JzdF2JybU9X6K4tWARfmjxRq_qnpesdQZXkkrZv4qB6iEizrrnzdcKNQfyUplaGC5FTG9iDz_ol5XQn8vELbEJk65B1O1r7jWpLmgfXwy9pg7GgbttbjTerwFLqjKVvU3-Z98Bkms_dEfKP2xmCivg1NEL6kUfSElhvfAZIela5V4u1nmi6DYADSKYEeA"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-surface-container-lowest py-xl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="font-h2 text-h2 text-primary mb-4">Ada Apa dengan Bumi Kita Hari Ini?</h2>
+                    <p class="font-body-md text-on-surface-variant">Tetap terinformasi dengan berita lingkungan paling krusial untuk masa depan yang lebih berkelanjutan.</p>
+                </div>
+                <button class="text-primary font-h3 text-body-md flex items-center gap-2 group">
+                    Baca Semua Update
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                </button>
+            </div>
+            <div class="grid md:grid-cols-3 gap-gutter">
+                <div class="bg-surface border border-emerald-50 rounded-3xl p-6 sunlight-shadow group hover:-translate-y-2 transition-all duration-300">
+                    <div class="aspect-video rounded-2xl mb-6 overflow-hidden">
+                        <img alt="Tarif Listrik" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqFHzj75ZPKrMwjbFB8EjK_XF-QnYLJE1uRO4d2vSbc4c1xqvIpPXBRQjH4kDMHodrEB2sLBzaLQiPLAwsRufoZ1JMMiBaJUIH3KQrUymf92S9L8eB2TmCdANKQ0HqeLt5VQYnl6Sr-ACB_tLL_HR2RBJ267HXP_GXnk3ENHdy5lq0CWkLvzjTgANAVayw62dRS5MPsHLotl9e4FRDk6EMk1ZEy0zRZ3GvULFrsOyWi9JMsEIfy9beqsocRjieKyG3IQceOykr8g"/>
+                    </div>
+                    <span class="text-secondary font-label-sm uppercase tracking-widest mb-3 block">Ekonomi Energi</span>
+                    <h3 class="font-h3 text-h3 mb-4 leading-snug">Tarif Dasar Listrik Naik? Ini Penyebabnya...</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">Menganalisis pergerakan harga energi global dan dampaknya terhadap tagihan rumah tangga Anda.</p>
+                </div>
+                <div class="bg-surface border border-emerald-50 rounded-3xl p-6 sunlight-shadow group hover:-translate-y-2 transition-all duration-300">
+                    <div class="aspect-video rounded-2xl mb-6 overflow-hidden">
+                        <img alt="Emisi Karbon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWJeqIUAGR8ad3hzfFFo4Q32Gmai5wVZ-u6paMRm5SWvBJqOi9RXomq2eKQOo-AiAXhkYfwjuGFg_rUj6lYjhflDZTt4XM479rurjFTGRV5nbAJzJrO87zIB7DjEdy8uXDlJGXNHV92OYlWHuYpBcU37o7ZdGr1iEiyskgcjtcnh2a9dKFmhHB1OEVdP_RlhQnwAPVehiV6DeezTulswHUMNbfKZESKlAdABji9fyA1SkMQdFkmWhu88e-E11fN8JoupmTbbeqyw"/>
+                    </div>
+                    <span class="text-secondary font-label-sm uppercase tracking-widest mb-3 block">Krisis Iklim</span>
+                    <h3 class="font-h3 text-h3 mb-4 leading-snug">Dampak Emisi Karbon Terhadap Cuaca Ekstrem</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">Bagaimana pola cuaca yang tidak menentu berhubungan langsung dengan jejak karbon harian kita.</p>
+                </div>
+                <div class="bg-surface border border-emerald-50 rounded-3xl p-6 sunlight-shadow group hover:-translate-y-2 transition-all duration-300">
+                    <div class="aspect-video rounded-2xl mb-6 overflow-hidden">
+                        <img alt="Energi Surya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3kdyCmggMyFDyuyGwOQ7MgvDjNZsJs7CP44ydCXT0zjsvpEt0EWPZEEdypS48GCctpggdUxbEYR_O-sWvans9wfRoZ4ugFsxgJWgMw-32DHyQOnIxEGpipsO9Rd0DcQ6gLYVqp_xV_kDLwklFVdlOq4rWNTyeDzrsmiO4jP0DDWD4nzyK21g4TEY0MYDaIXdzyIbEnVx9NYxJEX_xzPrSXoBD92K2pjbxvX1XlXjnCdQqa8Ww5TaZJZo0CYjkTLOPEoyR3KKF_A"/>
+                    </div>
+                    <span class="text-secondary font-label-sm uppercase tracking-widest mb-3 block">Solusi Terbarukan</span>
+                    <h3 class="font-h3 text-h3 mb-4 leading-snug">Potensi Energi Surya di Indonesia yang Melimpah</h3>
+                    <p class="text-on-surface-variant font-body-md mb-6">Menjelajahi peluang pemanfaatan matahari sebagai sumber daya utama yang belum maksimal dioptimalkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xl overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <img alt="Sustainable Living Items" class="w-full rounded-3xl sunlight-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVT7DhSBu2n80RjL0d1_HcfxT54_7l4k1aPm9EMehsg5EuuhEMTQ9qB0ncYWj8fnYscBLLy7-M_4La63aoa7f1R5haKUU6XEPpBQCv-cj4yGzfKjThvawG-_gsoLv2p84qYE-cf8Kd6Me_ZSXahaT0HhOHGBNfF_d1RJ_ZNXh5NRslHC37-hKejY4ylbLQMjnABnWjpUlOaRMMvH4k6TgU3_ZbB7YyW5HLOGP9_TXx3CTtGw-y_IIzzJ6_d6dta9WpAeZrGianrQ"/>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="font-h2 text-h2 text-primary mb-6">Hemat Energi Dimulai dari Sini</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Tidak perlu langkah drastis. Mulai kebiasaan baru Anda dengan langkah-langkah sederhana yang berdampak signifikan pada lingkungan dan dompet Anda.
+                    </p>
+                    <div class="space-y-8 mb-12">
+                        <div class="flex items-start gap-5 group">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-primary" data-icon="power_off">power_off</span>
+                            </div>
+                            <div>
+                                <h4 class="font-h3 text-xl mb-1">Cabut Steker</h4>
+                                <p class="text-on-surface-variant">Matikan alat elektronik yang tidak dipakai untuk menghindari 'vampire power'.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5 group">
+                            <div class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-secondary" data-icon="lightbulb">lightbulb</span>
+                            </div>
+                            <div>
+                                <h4 class="font-h3 text-xl mb-1">Ganti Lampu</h4>
+                                <p class="text-on-surface-variant">Beralih ke lampu LED yang lebih hemat daya hingga 80% dibanding bohlam biasa.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5 group">
+                            <div class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-primary" data-icon="thermostat">thermostat</span>
+                            </div>
+                            <div>
+                                <h4 class="font-h3 text-xl mb-1">Atur Suhu AC</h4>
+                                <p class="text-on-surface-variant">Jaga suhu AC di 24°C - 25°C untuk efisiensi kompresor yang optimal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-secondary text-on-primary px-8 py-4 rounded-full font-h3 flex items-center gap-3 sunlight-shadow active:scale-95 transition-all">
+                        Unduh Panduan Lengkap PDF
+                        <span class="material-symbols-outlined" data-icon="download">download</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-xl bg-primary text-on-primary rounded-t-[80px]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-h2 text-h2 mb-6">Ragu Beralih ke Energi Terbarukan? Tanyakan Saja!</h2>
+                <p class="font-body-lg text-primary-fixed">Punya pertanyaan tentang cara memasang panel surya, menghitung biaya awal, atau mengatasi kendala efisiensi energi di rumah? Tools pintar kami siap menjawab keluhan Anda.</p>
+            </div>
+            <div class="grid lg:grid-cols-5 gap-12 items-center">
+                <div class="lg:col-span-3">
+                    <div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-10 sunlight-shadow text-on-surface overflow-hidden relative">
+                        
+                        <div class="space-y-6" id="chat-box">
+                            <div class="flex justify-end">
+                                <div class="bg-primary-fixed/20 p-4 rounded-2xl rounded-tr-none max-w-[80%]">
+                                    <p class="font-body-md font-semibold text-primary">Berapa biaya pasang panel surya untuk rumah 1300 VA?</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                                    <span class="material-symbols-outlined text-white text-sm" data-icon="smart_toy">smart_toy</span>
+                                </div>
+                                <div class="bg-surface-container-low p-4 rounded-2xl rounded-tl-none max-w-[80%]">
+                                    <p class="font-body-md">Estimasi biaya untuk 1300 VA berkisar antara 15-20 Juta Rupiah. Ini sudah mencakup panel, inverter, dan instalasi dasar. Break-even point biasanya dicapai dalam 5-7 tahun!</p>
+                                </div>
+                            </div>
+                            
+                            <div id="suggestions-box" class="border-t border-surface-variant pt-6">
+                                <p class="font-label-sm text-outline mb-4 uppercase">Coba Klik Pertanyaan Ini:</p>
+                                <div class="flex flex-wrap gap-3">
+                                    <button class="chat-suggestion bg-surface-container px-4 py-2 rounded-full text-primary text-sm hover:bg-primary-fixed/30 transition-colors">Apakah motor listrik lebih hemat?</button>
+                                    <button class="chat-suggestion bg-surface-container px-4 py-2 rounded-full text-primary text-sm hover:bg-primary-fixed/30 transition-colors">Cara tagihan turun 20%?</button>
+                                    <button class="chat-suggestion bg-surface-container px-4 py-2 rounded-full text-primary text-sm hover:bg-primary-fixed/30 transition-colors">Syarat subsidi PLTS</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary-container/20 blur-3xl rounded-full"></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="p-8 border border-primary-container bg-primary-container/20 rounded-3xl">
+                        <h3 class="font-h3 text-h3 mb-4">Konsultasi AI Instan</h3>
+                        <ul class="space-y-4 font-body-md text-primary-fixed">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle">check_circle</span>
+                                Jawaban berbasis data terkini
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle">check_circle</span>
+                                Kalkulator ROI Solar Panel
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary-fixed" data-icon="check_circle">check_circle</span>
+                                Rekomendasi perangkat hemat daya
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full bg-secondary-container text-on-secondary-container px-8 py-5 rounded-2xl font-h3 text-xl flex items-center justify-center gap-3 active:scale-[0.98] transition-all sunlight-shadow">
+                        Tanya Masalahmu Sekarang (Gratis)
+                        <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-50 border-t border-slate-200 rounded-t-3xl mt-xl">
+    <div class="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 md:grid-cols-2 gap-16 lg:grid-cols-4">
+        <div class="lg:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+                <span class="material-symbols-outlined text-primary text-2xl" data-icon="eco">eco</span>
+                <span class="text-lg font-bold text-emerald-800 font-h2 flex items-center gap-2">
+                    EcoPulse 
+                    <span class="text-xs font-normal text-emerald-600">by AGWI PRODUCTION</span>
+                </span>
+            </div>
+            <p class="text-slate-500 font-body-md mb-8">
+                Memberdayakan individu untuk mengambil peran aktif dalam transisi energi global melalui edukasi dan teknologi cerdas.
+            </p>
+            <div class="flex gap-4">
+                <a class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                    <span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+                </a>
+                <a class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                    <span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                </a>
+                <a class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+                    <span class="material-symbols-outlined text-lg" data-icon="hub">hub</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <h4 class="font-h3 text-primary mb-6">Navigasi Cepat</h4>
+            <ul class="space-y-4">
+                <li><a class="text-slate-500 hover:text-emerald-600 transition-colors font-body-md hover:underline underline-offset-4" href="#">Tentang Kami</a></li>
+                <li><a class="text-slate-500 hover:text-emerald-600 transition-colors font-body-md hover:underline underline-offset-4" href="#">Privasi</a></li>
+                <li><a class="text-slate-500 hover:text-emerald-600 transition-colors font-body-md hover:underline underline-offset-4" href="#">S&K</a></li>
+                <li><a class="text-slate-500 hover:text-emerald-600 transition-colors font-body-md hover:underline underline-offset-4" href="#">Kontak</a></li>
+            </ul>
+        </div>
+        <div class="lg:col-span-2">
+            <h4 class="font-h3 text-primary mb-6">Berlangganan Newsletter</h4>
+            <p class="text-slate-500 mb-6">Dapatkan tips hemat energi dan update lingkungan mingguan langsung di inbox Anda.</p>
+            <form id="newsletter-form" class="flex gap-2">
+                <input required class="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all font-body-md" placeholder="Email Anda" type="email"/>
+                <button type="submit" class="bg-primary text-on-primary px-6 py-3 rounded-xl font-label-sm active:scale-95 transition-all">
+                    Daftar
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-10 py-8 border-t border-slate-200 text-center text-slate-400 font-label-sm">
+        © 2024 EcoPulse Platform. Committed to Ethical Modernism.
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. Logika Toggle Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // 2. Logika Chat Assistant Mockup
+        const chatSuggestions = document.querySelectorAll('.chat-suggestion');
+        const suggestionsBox = document.getElementById('suggestions-box');
+
+        chatSuggestions.forEach(button => {
+            button.addEventListener('click', function() {
+                const questionText = this.innerText;
+                
+                // Buat elemen bubble chat dari user
+                const userMessage = `
+                    <div class="flex justify-end mt-4 mb-6">
+                        <div class="bg-primary-fixed/20 p-4 rounded-2xl rounded-tr-none max-w-[80%]">
+                            <p class="font-body-md font-semibold text-primary">${questionText}</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Buat elemen bubble chat simulasi dari AI
+                const botMessage = `
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-white text-sm" data-icon="smart_toy">smart_toy</span>
+                        </div>
+                        <div class="bg-surface-container-low p-4 rounded-2xl rounded-tl-none max-w-[80%]">
+                            <p class="font-body-md">Ini adalah simulasi jawaban otomatis AI dari sistem kami. Pada versi sistem live nanti, pertanyaan Anda mengenai <strong>"${questionText}"</strong> akan dijawab secara komprehensif di sini!</p>
+                        </div>
+                    </div>
+                `;
+
+                // Sisipkan bubble chat di atas box suggestion (pertanyaan)
+                suggestionsBox.insertAdjacentHTML('beforebegin', userMessage + botMessage);
+            });
+        });
+
+        // 3. Logika Form Newsletter
+        const newsletterForm = document.getElementById('newsletter-form');
+        
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Mencegah page reload
+                alert("Terima kasih telah berlangganan! Tips hemat energi akan segera hadir di kotak masuk Anda.");
+                this.reset(); // Kosongkan input email setelah submit
+            });
+        }
+    });
+</script>
+</body>
+</html>
